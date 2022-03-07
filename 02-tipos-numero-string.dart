@@ -1,20 +1,17 @@
+void main() {
+  // String
+  final String name = 'Tony';
+  final surname = 'Stark';
 
-void main()  {
-  
-  // Strings 
-  final String nombre = 'Tony';
-  final apellido = 'Stark';
-  
-//   nombre = 'Peter';
-  
-  print('$nombre $apellido');
-  
-  
-//   Números
-  int empleados = 10;
-  double salario = 1856.25;
-  
-  print( empleados );
-  print( salario );
-  
+  print('$name $surname');
+  print(name[0]);
+
+  // Number
+  int employee = 10;
+  double salary = 1856.25;
+  var number = 1.0;
+
+  print(employee);
+  print(salary);
+  print(number);
 }

@@ -1,15 +1,8 @@
-
-
 void main() {
-  
-  // Este es un comentario
-  
+  // comment
+
   /*
-   *  Esto es un comentario multilinea
-   *  Hola de nuevo...
+   *  comment multiline
    */
-  
-  
-  print('Hola Mundo');
-  
+  print('Hello World');
 }

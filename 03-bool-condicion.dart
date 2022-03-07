@@ -1,13 +1,16 @@
 void main() {
-  
-  
   bool? isActive = null;
-  
-  if ( isActive == null ) {
-    print( 'isActive es null' );
+  if (isActive == null) {
+    print('isActive is null');
   } else {
-    print( 'No es null' );
+    print('Is not null');
   }
-  
-  
+
+  bool active = true;
+  print(active);
+  if ( !active ) {
+    print('Active');
+  } else {
+    print('No Active');
+  }
 }

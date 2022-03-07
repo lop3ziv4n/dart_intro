@@ -1,48 +1,42 @@
-abstract class Animal { }
+abstract class Animal {}
 
-abstract class Mamifero extends Animal { }
-abstract class Ave extends Animal { }
-abstract class Pez extends Animal { }
+abstract class Mammal extends Animal {}
 
-abstract class Volador {
-  void volar() => print('estoy volando');
+abstract class Bird extends Animal {}
+
+abstract class Fish extends Animal {}
+
+abstract class Flying {
+  void fly() => print('is flying');
 }
 
-abstract class Caminante {
-  void caminar() => print('estoy caminando');
+abstract class Walker {
+  void walk() => print('is walking');
 }
 
-abstract class Nadador {
-  void nadar() => print('estoy nadando');
+abstract class Swimmer {
+  void swim() => print('is swimming');
 }
 
-class Delfin extends Mamifero with Nadador{}
+class Dolphin extends Mammal with Swimmer {}
 
-class Murcielago extends Mamifero with Caminante, Volador {}
+class Bat extends Mammal with Walker, Flying {}
 
-class Gato extends Mamifero with Caminante {}
+class Cat extends Mammal with Walker {}
 
-class Paloma extends Ave with Caminante, Volador {}
+class Dove extends Bird with Walker, Flying {}
 
-class Pato extends Ave with Caminante, Volador, Nadador {}
+class Duck extends Bird with Walker, Flying, Swimmer {}
 
-class Tiburon extends Pez with Nadador {}
+class Shark extends Fish with Swimmer {}
 
-class PezVolador extends Pez with Nadador, Volador {}
-
+class FlyingFish extends Fish with Swimmer, Flying {}
 
 void main() {
-  
-  
-//   final flipper = new Delfin();
-//   flipper.nadar();
-  
-//   final batman = new Murcielago();
-//   batman.caminar();
-//   batman.volar();
+  final flipper = new Dolphin();
+  flipper.swim();
 
+  final batman = new Bat();
+  batman.walk();
+  batman.fly();
 }
-
-
-
-

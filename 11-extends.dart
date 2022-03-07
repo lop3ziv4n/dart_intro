@@ -1,44 +1,32 @@
 void main() {
-    
-  final superman = new Heroe('Clark Kent');
-  final luthor   = new Villano('Lex Luthor');
- 
-  
-  print( superman );
-  print( luthor );
+  final superman = new Hero('Clark Kent');
+  superman.power = 'fly';
+  final luthor = new Villain('Lex Luthor');
+
+  print(superman);
+  print(luthor);
 }
 
+abstract class Character {
+  String? power;
+  String name;
 
-abstract class Personaje {
-  String? poder;
-  String nombre;
-  
-  Personaje( this.nombre );
-  
+  Character(this.name);
+
   @override
   String toString() {
-    return '$nombre - $poder';
+    return '$name - $power';
   }
-  
 }
 
+class Hero extends Character {
+  int courage = 100;
 
-class Heroe extends Personaje {
- 
-   int valentia = 100;
-  
-   Heroe( String nombre ): super( nombre );
-  
+  Hero(String name) : super(name);
 }
 
-class Villano extends Personaje {
-  
-  int maldad = 50;
-  
-  Villano( String nombre ): super( nombre );
+class Villain extends Character {
+  int evil = 50;
+
+  Villain(String name) : super(name);
 }
-
-
-
-
-

@@ -1,37 +1,20 @@
 void main() async {
-  
-  print('Antes de la petición');
-  
+  print('before request');
+
   final data = await httpGet('https://api.nasa.com/aliens');
-  
-  print( data );
-  
-//   final nombre = await getNombre( '10' );
-//   print( nombre );
-//    getNombre( '10' ).then( print );
-  
-  
-  print('Fin del programa');
-    
+  print(data);
+
+  final name = await getName('10');
+  print(name);
+  getName('10').then(print);
+
+  print('End');
 }
 
-
-Future<String> getNombre( String id ) async {
-  return '$id - Fernando';
-} 
-
-
-
-
-
-Future<String> httpGet( String url ) {
-  return Future.delayed( 
-    Duration( seconds: 3 ), () =>'Hola Mundo - 3 segundos' 
-  );
+Future<String> getName(String id) async {
+  return '$id - Peter';
 }
 
-
-
-
-
-
+Future<String> httpGet(String url) {
+  return Future.delayed(Duration(seconds: 4), () => 'Hello World - 4 seconds');
+}
